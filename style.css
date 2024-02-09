@@ -1,0 +1,86 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34; /* Maintain the dark background for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff; /* Keep text light for visibility */
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 400px; /* Ensure the calculator has a reasonable maximum width */
+  padding: 25px;
+  border-radius: 20px; /* Rounded corners for a modern look */
+  background-color: #3a3f47; /* Dark shade for the calculator */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25); /* Subtle shadow for depth */
+}
+
+.display {
+  width: 88%;
+  background-color: #24282f; /* Slightly lighter for contrast */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 -4px 2px -2px rgba(0,0,0,0.2);
+  font-size: 1.75em; /* Enhance readability */
+  color: #78c2ad; /* Soft green for the display */
+  text-align: right;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  flex-grow: 1;
+  margin: 5px;
+  padding: 20px 0; /* Increase padding for better tap targets */
+  font-size: 1.25em; /* Larger font for readability */
+  color: #fff; /* White for contrast */
+  background-color: #4b515d; /* Neutral yet distinct for buttons */
+  border: none;
+  border-radius: 8px; /* Soft rounded corners */
+  transition: background-color 0.3s, transform 0.1s;
+  box-shadow: 0 4px #42474f; /* Depth effect */
+}
+
+button:active {
+  background-color: #626970; /* Feedback on press */
+  box-shadow: 0 2px #3b3f46;
+  transform: translateY(2px); /* Tactile feedback */
+}
+
+/* Special styling for operation and equal buttons for visual cues */
+.operation-btn {
+  background-color: #ff9500; /* Bright color for operations */
+}
+
+.operation-btn:active {
+  background-color: #d17a00;
+}
+
+.equal-btn {
+  background-color: #0a8f08; /* Standout color for "=" */
+}
+
+.equal-btn:active {
+  background-color: #0a6f07;
+}
+
+/* Ensure full width for smaller screens for better usability */
+@media (max-width: 400px) {
+  .calculator {
+      width: 95%;
+      padding: 20px; /* Adjust padding for screen size */
+  }
+}
+
+
+
